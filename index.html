@@ -4,86 +4,232 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monwabisi's Website</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Montserrat", Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f2f2f2;
+        background-color: #141414;
+        color: #fff;
+      }
+
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: #333;
       }
 
       .header {
         background-color: #333;
         color: #fff;
-        padding: 10px;
+        padding: 20px 0;
         text-align: center;
+        margin-bottom: 20px;
       }
-      .HeadingH3 {
-        font-family: Georgia, "Times New Roman", Times, serif;
+
+      .header h1 {
+        margin: 0;
+        font-size: 36px;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
+      }
+
+      .header p {
+        margin: 10px 0 0;
+        font-size: 18px;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
       }
 
       .content {
         padding: 20px;
       }
+
       .photo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px;
+        text-align: center;
       }
 
       .photo img {
         width: 200px;
         height: 250px;
-        border-radius: 75%;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
 
       .bio {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.6;
+        margin-top: 20px;
+      }
+
+      .bio h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 24px;
+        margin-top: 0;
+        color: #fff;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
       }
 
       .footer {
         background-color: #333;
         color: #fff;
-        padding: 10px;
+        padding: 20px 0;
         text-align: center;
+        margin-top: 20px;
       }
 
-      .column {
-        float: left;
-        margin-left: 5px;
-        text-align: left;
+      .footer p {
+        margin: 0;
       }
 
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
+      .skills {
+        margin-top: 30px;
       }
 
-      ul {
+      .skills h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 24px;
+        margin-top: 0;
+        color: #fff;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
+      }
+
+      .skills ul {
         list-style: none;
         padding: 0;
       }
 
-      .paragrapgh {
-        font-family: Arial, Helvetica, sans-serif;
+      .skills ul li {
+        margin-bottom: 10px;
+      }
+
+      .skills ul li img {
+        width: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .skills ul li span {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+
+      .projects {
+        margin-top: 30px;
+      }
+
+      .projects h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 24px;
+        margin-top: 0;
+        color: #fff;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
+      }
+
+      .projects p {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .projects img {
+        width: 200px;
+        height: 250px;
+        border: 1px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .social-media {
+        margin-top: 30px;
+      }
+
+      .social-media h3 {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 24px;
+        margin-top: 0;
+        color: #fff;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
+      }
+
+      .social-media p {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      .social-media-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align to the left */
+        margin-top: 10px;
+      }
+
+      .social-media-links a {
+        margin: 0 10px;
+      }
+
+      .social-media-links img {
+        width: 30px;
+        height: auto;
+      }
+
+      .email {
+        margin-top: 10px;
+        text-align: left;
+      }
+
+      .email img {
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+        vertical-align: middle;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
+      }
+
+      .email p {
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+        text-shadow: 0 0 5px #024c63; /* Green glow */
       }
     </style>
   </head>
   <body>
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
     <header class="header">
       <h1>Monwabisi Nongena</h1>
-      <p>Web Developer</p>
+      <p>Web Developer/Student</p>
     </header>
     <main class="content">
       <div class="photo">
         <img src="20230822_164516.jpg" alt="Image of Monwabisi" />
       </div>
       <div class="bio">
-        <h3 class="HeadingH3">About Me</h3>
-        <p class="paragrapgh">
+        <h3>About Me</h3>
+        <p>
           Code whisperer by day, pixel magician by night, I'm Monwabisi Nongena,
           a student web developer on a mission to bridge the gap between
           imagination and reality, line by line. My journey began with a
@@ -91,14 +237,14 @@
           quickly evolved into a deep passion for the intricate dance between
           front-end artistry and back-end muscle.
         </p>
-        <p class="paragrapgh">
+        <p>
           While I'm still honing my skills in the coding dojo, I'm already
           captivated by the full spectrum of web development. From crafting
           clean and user-friendly interfaces to building robust and efficient
           back-end systems, every problem solved feels like a portal to a new
           digital wonderland.
         </p>
-        <p class="paragrapgh">
+        <p>
           The web is a vast and ever-evolving canvas, and I'm excited to be a
           part of the artists who keep pushing its boundaries. So, whether
           you're a fellow explorer in the digital realms or someone looking for
@@ -106,7 +252,7 @@
           to coding/programming and collaborate on building something truly
           remarkable.
         </p>
-        <p class="paragrapgh">
+        <p>
           Beyond the code, you'll find me gaming on my spare time. But one
           thing's for sure: my love for web development burns bright.
         </p>
@@ -119,82 +265,63 @@
           to learn more.
         </p>
       </div>
-      <div class="Skill And Tools">
-        <h3 class="HeadingH3">Skills And Tools</h3>
-      </div>
-      <div class="row">
-        <ul class="column">
+      <div class="skills">
+        <h3>Skills And Tools</h3>
+        <ul>
           <li>
-            <img
-              src="logo-javascript-2.png"
-              alt="JavaScript"
-              style="width: 12%; margin-left: 5px; vertical-align: middle"
-            />
-            <span>JavaScript</span>
+            <img src="logo-javascript-2.png" alt="JavaScript" /><span
+              >JavaScript: Still learning</span
+            >
           </li>
           <li>
-            <img
-              src="HTML5_badge.png"
-              alt="HTML icon"
-              style="width: 10%; margin-left: 1%; vertical-align: middle"
-            /><span>HTML</span>
+            <img src="HTML5_badge.png" alt="HTML icon" /><span
+              >HTML: Still learning</span
+            >
           </li>
           <li>
-            <img
-              src="logo-css-3-1536.png"
-              alt="CSS icon"
-              style="width: 10%; margin-left: 1%; vertical-align: middle"
-            />
-            <span>CSS</span>
+            <img src="logo-css-3-1536.png" alt="CSS icon" /><span
+              >CSS: Still learning</span
+            >
           </li>
           <li>
-            <img
-              src="git-icon-logo-png-transparent.png"
-              alt="Git icon"
-              style="width: 10%; margin-left: 1%; vertical-align: middle"
-            />
-            <span>Git</span>
+            <img src="git-icon-logo-png-transparent.png" alt="Git icon" /><span
+              >Git: Still learning</span
+            >
           </li>
         </ul>
       </div>
-      <div class="Project">
-        <h3 class="HeadingH3">Projects</h3>
-        <div>
-          <p class="paragrapgh">Currently I don't have any projects</p>
-        </div>
-      </div>
-      <h3 class="HeadingH3">Social Media</h3>
-      <div class="paragrapgh">
-        <p>You can contact via:</p>
-      </div>
-      <div class="social-media-links">
-        <a
-          href="https://www.instagram.com/monwabisi00?igsh=MzFpa2ZiYnNlNXc2"
-          target="_blank"
-        >
-          <img
-            src="70029-logo-media-instagram-jpeg-social-free-frame.png"
-            alt="Instagram Icon"
-            style="width: 10%"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/monwabisi-nongena-540779234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank"
-        >
-          <img
-            src="linkedin_logo_icon_187302.png"
-            alt="Linkedin icon"
-            style="width: 6%"
-          />
-        </a>
-        <p>Or you can contact me on my email:</p>
+      <div class="projects">
+        <h3>Projects</h3>
         <img
-          src="Gmail_(4).png"
-          alt="Email Icon"
-          style="width: 5%; margin-right: 5px; vertical-align: middle"
+          src="_139364a5-5aeb-4eb3-95d8-dba03914b464.jpg"
+          alt="Coming soon image"
         />
-        Nongenamonwabisi@gmail.com
+        <p>Currently I don't have any projects but coming soon</p>
+      </div>
+      <div class="social-media">
+        <h3>Social Media</h3>
+        <p>You can contact via:</p>
+        <div class="social-media-links">
+          <a
+            href="https://www.instagram.com/monwabisi00?igsh=MzFpa2ZiYnNlNXc2"
+            target="_blank"
+          >
+            <img
+              src="70029-logo-media-instagram-jpeg-social-free-frame.png"
+              alt="Instagram Icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/monwabisi-nongena-540779234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <img src="linkedin_logo_icon_187302.png" alt="Linkedin icon" />
+          </a>
+        </div>
+        <div class="email">
+          <img src="Gmail_(4).png" alt="Email Icon" />
+          <p>Nongenamonwabisi@gmail.com</p>
+        </div>
       </div>
     </main>
     <footer class="footer">
