@@ -42,7 +42,7 @@
       .header {
         background-color: #333;
         color: #fff;
-        padding: 20px 0;
+        padding: 60px 0 20px;
         text-align: center;
         margin-bottom: 20px;
       }
@@ -142,7 +142,7 @@
         font-size: 24px;
         margin-top: 0;
         color: #fff;
-        text-shadow: 0 0 5px #024c63; /* Green glow */
+        text-shadow: 0 0 5px #024c63;
       }
 
       .projects p {
@@ -152,6 +152,7 @@
 
       .social-media {
         margin-top: 30px;
+        padding-top: 10px;
       }
 
       .social-media h3 {
@@ -212,7 +213,7 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-    <header class="header">
+    <header class="header" id="home">
       <h1>Monwabisi Nongena</h1>
       <p>Web Developer/Student</p>
     </header>
@@ -220,7 +221,7 @@
       <div class="photo">
         <img src="20230822_164516.jpg" alt="Image of Monwabisi" />
       </div>
-      <div class="bio">
+      <div class="bio" id="about">
         <h3>About Me</h3>
         <p>
           Code whisperer by day, pixel magician by night, I'm Monwabisi Nongena,
@@ -253,12 +254,13 @@
           You can access CV
           <a
             href="https://drive.google.com/file/d/1775aPr9FIr_eiZSryztTS7LmA8urg4wA/view?usp=drivesdk"
+            target="_blank"
             >here</a
           >
           to learn more.
         </p>
       </div>
-      <div class="skills">
+      <div class="skills" id="skills">
         <h3>Skills And Tools</h3>
         <ul>
           <li>
@@ -283,11 +285,11 @@
           </li>
         </ul>
       </div>
-      <div class="projects">
+      <div class="projects" id="projects">
         <h3>Projects</h3>
         <p>Currently I don't have any projects but coming soon</p>
       </div>
-      <div class="social-media">
+      <div class="social-media" id="contact">
         <h3>Social Media</h3>
         <p>You can contact via:</p>
         <div class="social-media-links">
@@ -308,13 +310,36 @@
           </a>
         </div>
         <div class="email">
-          <img src="Gmail_(4).png" alt="Email Icon" />
-          <p>Nongenamonwabisi@gmail.com</p>
+          <a href="mailto:Nongenamonwabisi@gmail.com">
+            <img
+              src="Gmail_(4).png"
+              alt="Email Icon"
+              style="width: 5%; margin-right: 5px; vertical-align: middle"
+            />
+            Nongenamonwabisi@gmail.com
+          </a>
         </div>
       </div>
     </main>
     <footer class="footer">
       <p>&copy; Monwabisi 2024</p>
     </footer>
+    <script>
+      // Smooth scrolling effect for navigation links
+      document.querySelectorAll(".navbar a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1); // Remove the '#' symbol
+          const targetElement = document.getElementById(targetId);
+          const offsetTop = targetElement.offsetTop;
+
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
